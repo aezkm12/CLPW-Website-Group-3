@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-image: linear-gradient(#acdae0, #9fe4ff, #aee7ff, #fff6a0, #ffbd41, #ce9c40, #a77427, #4d432e, #253569, #1e2b58, #000b0f)
+}
+
+.poem-container {
+    margin: 0 auto;
+    padding: 60px 20px 30px 30px;
+    box-shadow: 0px 0px 5px;
+    text-align: center;
+    max-width: 80vh;
+    background-color: #ffffff8e;
+}
+
+.poem-container h1 {
+  font-size: 40px;
+}
+
+.poem-container h2 {
+  font-size: 25px;
+}

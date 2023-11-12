@@ -7,8 +7,7 @@
 }
 
 body {
-  padding-top: 110px;
-  padding-bottom: 110px;
+  padding-top: 122px;
   background-color: #c8f8df;
 }
 
@@ -142,6 +141,9 @@ nav a:hover {
 
 .project p {
   border-bottom: 10px;
+  font-weight: 500;
+  width: 80%;
+  margin: 0 auto;
   color: #fff;
 }
 
