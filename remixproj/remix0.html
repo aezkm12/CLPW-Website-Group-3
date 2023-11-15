@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="remix0style.css" />
+    <title>GROUP 3 - Element Remix Project</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <h1 id="countdown">23:59</h1>
+      <a href="remix1.html">Start</a>
+    </div>
+    <script>
+        // Function to update the countdown
+        function updateCountdown() {
+          var countdownElement = document.getElementById('countdown');
+          var currentTime = countdownElement.textContent;
+          var timeArray = currentTime.split(':');
+          var minutes = parseInt(timeArray[0]);
+          var seconds = parseInt(timeArray[1]);
+      
+          // Check if it's 23:59, then update to 00:00
+          if (minutes === 23 && seconds === 59) {
+            countdownElement.textContent = '00:00';
+            
+            // Clear the interval when it reaches 00:00
+            clearInterval(intervalId);
+          } else {
+            // Otherwise, decrement the seconds
+            seconds = (seconds + 1) % 60;
+            minutes = seconds === 0 ? (minutes + 1) % 24 : minutes;
+            
+            // Format the new time and update the element
+            var newTime = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            countdownElement.textContent = newTime;
+          }
+        }
+      
+        // Update the countdown every second
+        var intervalId = setInterval(updateCountdown, 1000);
+      </script>
+  </body>
+</html>

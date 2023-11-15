@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time Check</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        font-family: "Montserrat", sans-serif;
+      }
+
+      h1 {
+        color: #ffff;
+        text-align: center;
+      }
+
+      body {
+        background-image: linear-gradient(#1d456d, #2a79c9, #bbbabf);
+        height: auto;
+        background-attachment: fixed;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .main-cont {
+        margin-top: 190px;
+      }
+
+      input {
+        padding: 5px;
+        font-size: 30px;
+      }
+
+      button {
+        padding: 5px;
+        font-size: 30px;
+        background-color: #7ea2c7;
+        border: none;
+        cursor: pointer;
+      }
+
+      p {
+        text-align: center;
+        color: #ffff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-cont">
+      <h1>What time is it now?</h1>
+      <input type="text" name="time" id="time" placeholder="Use military time" />
+      <button onclick="checkAnswer()">Submit</button>
+      <p id="result"></p>
+    </div>
+    <script>
+      function checkAnswer() {
+        var userAnswer = document
+          .getElementById("time")
+          .value.trim()
+          .toLowerCase();
+        var correctAnswer = "8:00";
+
+        if (userAnswer === correctAnswer || userAnswer === "08:00") {
+          document.getElementById("result").textContent =
+            "Correct! It is 8:00. ✅";
+          // Redirect to the next page when the answer is correct
+          window.location.href = "remix2.html"; // Change 'next-page.html' to the actual URL of the next page
+        } else {
+          document.getElementById("result").textContent =
+            "Incorrect. Try again. ❌";
+        }
+      }
+    </script>
+  </body>
+</html>
